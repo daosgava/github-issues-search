@@ -1,6 +1,8 @@
 # Github issues search
 
-This is an exercise for requesting issues from the github Facebook/react repo using the GitHub GraphQL API V4 by typing a keyword in the seach input.
+This is an exercise for requesting issues from the github Facebook/react repo using the GitHub GraphQL API V4. </br>
+
+When the users type a keyword in the input field, an autocomplete input box will appear showing the results.
 
 ## Running the App
 
