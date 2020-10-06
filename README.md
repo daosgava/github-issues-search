@@ -7,7 +7,7 @@ This is an exercise for requesting issues from the github Facebook/react repo us
 
 ## Running the App
 
-In order to run the app you need to set up a secrets folder with an API token
+In order to run the app you need to set up a secrets folder with an API token.
 
 ```
 yarn install
@@ -22,7 +22,7 @@ Get your Personal access token [PAT guide](https://docs.github.com/en/free-pro-t
 
 ## Set up you secrets folder
 
-For this exercise the token needs to be included in src/components/shared/secrets as a JSON file</br>
+For this exercise the token needs to be included in src/components/shared/secrets as a JSON file.</br>
 
 - Path: src/components/shared/secrets/token.json
 
