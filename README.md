@@ -39,8 +39,8 @@ read:org
 read:public_key
 read:gpg_key
 ```
--7. Click Generate token.
--8. Click  to copy the token to your clipboard. For security reasons, after you navigate off the page, you will not be able to see the token again.
+- 7. Click Generate token.
+- 8. Click  to copy the token to your clipboard. For security reasons, after you navigate off the page, you will not be able to see the token again.
 
 ## Set up you secrets folder
 
