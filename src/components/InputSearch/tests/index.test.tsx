@@ -1,6 +1,6 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
-import InputSearchContainer from './index';
+import InputSearchContainer from '../index';
 
 test('renders learn react link', async () => {
   const { container } = render(<InputSearchContainer />);

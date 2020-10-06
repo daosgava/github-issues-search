@@ -1,4 +1,4 @@
-import fecthDataByKeyword, { setQuery, callGithubApi } from './fecthDataByKeyword';
+import fecthDataByKeyword, { setQuery, callGithubApi } from '../fecthDataByKeyword';
 
 jest.mock('axios', () => {
   return {

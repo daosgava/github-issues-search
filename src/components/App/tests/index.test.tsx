@@ -1,9 +1,9 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
-import App from './index';
+import App from '../index';
 
 test('renders learn react link', async () => {
-  const { getByText }: any = render(<App />);
+  const { getByText } = render(<App />);
   const linkElement = getByText(/Issues/i);
   expect(linkElement).toBeInTheDocument();
   await act(() => Promise.resolve());
