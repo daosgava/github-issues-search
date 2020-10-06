@@ -4,7 +4,7 @@ This exercise for requesting issues from the github Facebook/react repo using th
 
 ## Running the App
 
-You need to set up you secrets folder with an API token
+In order to run the app you need to set up you secrets folder with an API token
 
 ```
 yarn install
