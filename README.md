@@ -21,10 +21,10 @@ Get you Personal access token [PAT guide](https://docs.github.com/en/free-pro-te
 
 ## Set up you secrets folder
 
-For this exercise the token needs to be in src/components/shared/secrets/token.json.
+For this exercise the token needs to be in src/components/shared/secrets/token.json.</br>
 
+Example:
 ```
-  JSON file example:
   {
     "github": "__YOUR_TOKEN"
   } 
