@@ -1,13 +1,12 @@
-
 import { node } from '../shared/types';
-import axios from 'axios';
+import axios, { AxiosPromise, AxiosResponse } from 'axios';
 import { getGithubToken } from '../shared/utils';
 
 const bearerToken = `bearer ${getGithubToken()}`;
 // TODO: move routes to a config file
 const endPoint = 'https://api.github.com/graphql';
 
-const setQuery = (query: string, numberOfResults: number): string => (
+export const setQuery = (query: string, numberOfResults: number): string => (
   JSON.stringify({
     query:
       `query FindIssues {
@@ -27,7 +26,17 @@ const setQuery = (query: string, numberOfResults: number): string => (
   })
 );
 
-const fecthDataByKeyword = async (keyword: string, numberOfResults: number): Promise<node[]> => {
+export const callGithubApi = (keyword: string, numberOfResults: number): Promise<AxiosPromise> => axios.post(
+  endPoint,
+  setQuery(`repo:facebook/react is:issue ${keyword}`, numberOfResults),
+  {
+    headers: {
+      Authorization: bearerToken,
+    },
+  },
+);
+
+export const fecthDataByKeyword = async (keyword: string, numberOfResults: number): Promise<node[]> => {
   if (!bearerToken) {
     throw new Error('Token not defined!');
   }
@@ -37,24 +46,11 @@ const fecthDataByKeyword = async (keyword: string, numberOfResults: number): Pro
   }
 
   try {
-    const { data }: any = await axios.post(
-      endPoint,
-      setQuery(`repo:facebook/react is:issue ${keyword}`, numberOfResults),
-      {
-        headers: {
-          Authorization: bearerToken,
-        },
-      },
-    );
-
+    console.log(setQuery(`repo:facebook/react is:issue ${keyword}`, numberOfResults));
+    const { data }: AxiosResponse = await callGithubApi(keyword, numberOfResults);
     return data.data.search.edges;
   } catch (e) {
-    /*
-      Log the error coming from the API
-      but we don't break the page
-    */
     console.log(e);
-
     return [];
   }
 };
