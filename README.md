@@ -20,6 +20,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Get your Personal access token [PAT guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) 
 
+## Get Personal Access Token
+
+- 1. In the upper-right corner of any page, click your profile photo, and then click Settings
+- 2. In the left sidebar, click Developer settings.
+- 3. In the left sidebar, click Personal access tokens.
+- 4. Click Generate new token.
+- 5. Give your token a descriptive name
+- 6. Select the following options
+```
+user
+public_repo
+repo
+repo_deployment
+repo:status
+read:repo_hook
+read:org
+read:public_key
+read:gpg_key
+```
+-7. Click Generate token.
+-8. Click  to copy the token to your clipboard. For security reasons, after you navigate off the page, you will not be able to see the token again.
+
 ## Set up you secrets folder
 
 For this exercise the token needs to be included in src/components/shared/secrets as a JSON file.</br>
