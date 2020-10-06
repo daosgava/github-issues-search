@@ -46,7 +46,6 @@ export const fecthDataByKeyword = async (keyword: string, numberOfResults: numbe
   }
 
   try {
-    console.log(setQuery(`repo:facebook/react is:issue ${keyword}`, numberOfResults));
     const { data }: AxiosResponse = await callGithubApi(keyword, numberOfResults);
     return data.data.search.edges;
   } catch (e) {

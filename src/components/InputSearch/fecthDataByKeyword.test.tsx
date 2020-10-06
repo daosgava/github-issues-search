@@ -1,5 +1,19 @@
 import fecthDataByKeyword, { setQuery, callGithubApi } from './fecthDataByKeyword';
 
+jest.mock('axios', () => {
+  return {
+    post: () => Promise.resolve({
+      data: {
+        data: {
+          search: {
+            edges: [],
+          }
+        },
+      },
+    }),
+  }
+});
+
 test('fecthDataByKeyword should return results', async () => {
   const results = await fecthDataByKeyword('bug', 10);
   expect(Array.isArray(results)).toBeTruthy();

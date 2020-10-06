@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link: <>
+    <InputContainer
+      inputValue={inputValue}
+      handleOnChange={handleOnChange}
+      handleKeyDown={handleKeyDown}
+    />
+    <IssuesBox issues={issues} cursor={cursor} />
+  </> 1`] = `
+<div>
+  <input
+    class="sc-dlnjPT MGroj"
+    tabindex="0"
+    type="text"
+    value=""
+  />
+  <div
+    class="sc-hKFyIo gpycqG"
+    data-display="0"
+  />
+</div>
+`;
