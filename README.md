@@ -7,7 +7,7 @@ This is an exercise for requesting issues from the github Facebook/react repo us
 
 ## Running the App
 
-In order to run the app you need to set up a secrets folder with  API token
+In order to run the app you need to set up a secrets folder with an API token
 
 ```
 yarn install
