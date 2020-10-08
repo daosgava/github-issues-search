@@ -42,8 +42,10 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.4.2",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
+    "react-test-renderer": "^16.9.0",
     "styled-components": "^5.2.0"
   },
   "resolutions": {

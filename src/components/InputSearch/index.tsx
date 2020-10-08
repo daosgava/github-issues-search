@@ -17,8 +17,7 @@ const InputSearchContainer = (): ReactElement => {
 
     if (debouncedSearchTerm) {
       const getData = async () => {
-        const res: node[] = await fecthDataByKeyword(`${debouncedSearchTerm}`, numberOfResults);
-
+        const res: node[] = await fecthDataByKeyword(debouncedSearchTerm, numberOfResults);
         if (isSubscribed) {
           setIssues([...res]);
         }
