@@ -2,11 +2,11 @@ import token from '../secrets/token.json';
 
 /*
   TODO: Handle secrets with a vault
-  For this exercise the secret is included in secrets/token.json
+  For this exercise the secret needs to be included in secrets/token.json
   
   example:
   {
-    "github": "__YOUR_TOKEN"
+    "github": "__YOUR_TOKEN__"
   }
 */
 
