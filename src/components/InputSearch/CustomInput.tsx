@@ -1,17 +1,17 @@
 import React, { ReactElement } from 'react';
 import { Input } from '../shared';
 
-type InputContainerProps = {
+type CustomInputProps = {
   handleOnChange: (e: React.FormEvent<HTMLInputElement>) => void;
   inputValue: string;
   handleKeyDown: (e: React.KeyboardEvent) => void;
 };
 
-const InputContainer = ({
+const CustomInput = ({
   inputValue,
   handleOnChange,
   handleKeyDown,
-}: InputContainerProps): ReactElement => {
+}: CustomInputProps): ReactElement => {
   return (
     <>
       <Input
@@ -25,4 +25,4 @@ const InputContainer = ({
   );
 };
 
-export default InputContainer;
+export default CustomInput;

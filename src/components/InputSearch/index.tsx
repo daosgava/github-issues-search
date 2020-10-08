@@ -1,10 +1,10 @@
 import React, { ReactElement, useCallback, useState } from 'react';
 import { node } from '../shared/types';
-import InputContainer from './InputContainer';
+import CustomInput from './CustomInput';
 import IssuesBox from './IssuesBox';
 import { useDebounce, useFecthDataByKeyword } from '../shared/hooks';
 
-const InputSearchContainer = (): ReactElement => {
+const InputSearch = (): ReactElement => {
   const [inputValue, setInputValue] = useState<string>('');
   const [cursor, setCursor] = useState<number>(0);
   const numberOfResults = 10;
@@ -31,7 +31,7 @@ const InputSearchContainer = (): ReactElement => {
 
   return (
     <>
-      <InputContainer
+      <CustomInput
         inputValue={inputValue}
         handleOnChange={handleOnChange}
         handleKeyDown={handleKeyDown}
@@ -41,4 +41,4 @@ const InputSearchContainer = (): ReactElement => {
   );
 };
 
-export default InputSearchContainer;
+export default InputSearch;

@@ -1,13 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link: <>
-    <InputContainer
-      inputValue={inputValue}
-      handleOnChange={handleOnChange}
-      handleKeyDown={handleKeyDown}
-    />
-    <IssuesBox issues={issues} cursor={cursor} />
-  </> 1`] = `
+exports[`renders learn react link 1`] = `
 <div>
   <input
     class="sc-dlnjPT MGroj"

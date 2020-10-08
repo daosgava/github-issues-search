@@ -1,17 +1,10 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
-import InputSearchContainer from '../index';
+import InputSearch from '../index';
 
 test('renders learn react link', async () => {
-  const { container } = render(<InputSearchContainer />);
-  expect(container).toMatchSnapshot(`<>
-    <InputContainer
-      inputValue={inputValue}
-      handleOnChange={handleOnChange}
-      handleKeyDown={handleKeyDown}
-    />
-    <IssuesBox issues={issues} cursor={cursor} />
-  </>`);
+  const { container } = render(<InputSearch />);
+  expect(container).toMatchSnapshot();
 
   await act(() => Promise.resolve());
 });
