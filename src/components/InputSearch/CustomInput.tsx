@@ -5,12 +5,14 @@ type CustomInputProps = {
   handleOnChange: (e: React.FormEvent<HTMLInputElement>) => void;
   inputValue: string;
   handleKeyDown: (e: React.KeyboardEvent) => void;
+  placeholder: string;
 };
 
 const CustomInput = ({
   inputValue,
   handleOnChange,
   handleKeyDown,
+  placeholder,
 }: CustomInputProps): ReactElement => {
   return (
     <>
@@ -20,6 +22,7 @@ const CustomInput = ({
         value={inputValue}
         onChange={handleOnChange}
         onKeyDown={handleKeyDown}
+        placeholder={placeholder}
       />
     </>
   );

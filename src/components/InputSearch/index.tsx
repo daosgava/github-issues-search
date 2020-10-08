@@ -35,6 +35,7 @@ const InputSearch = (): ReactElement => {
         inputValue={inputValue}
         handleOnChange={handleOnChange}
         handleKeyDown={handleKeyDown}
+        placeholder='Search for an issue'
       />
       <IssuesBox issues={issues} cursor={cursor} />
     </>
